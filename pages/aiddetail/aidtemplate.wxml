@@ -1,0 +1,20 @@
+<template name="aidTemplate">
+  <view class="aidscence" wx:if="{{steps.length>0}}">
+    <text style="margin-top:20rpx">{{(name==null||name==''? aidname:name)}}</text>
+    <view class="aidsteps">
+      <block wx:for="{{steps}}" wx:for-item="step" wx:key="{{step.id}}">
+        <view class="aidstep">
+          <text class="aidstepimg">{{step.id}}</text>
+          <view class="aidsteptext">
+            <text style="font-size:30rpx;">{{step.pageDesc}}</text>
+            <text style="color:#999;font-size:28rpx;">{{step.extendedDesc}}</text>
+            <view class="buttonstyle">
+              <button wx:if="{{(step.call!=null&&step.call!='')}}" bindtap="phonecall" id="{{step.call}}" style="margin-left:74rpx;background:#f96060;color:#fff" >{{step.callText}}</button>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{steps.length!=step.id}}" style="width:100%;background:#999;height:2rpx"></view>
+      </block>
+    </view>
+  </view>
+</template>

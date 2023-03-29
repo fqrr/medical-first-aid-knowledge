@@ -1,0 +1,29 @@
+<import src="listtemplate.wxml" />
+<view class="page">
+  <view>
+    <view class="weui-tab">
+      <view class="weui-navbar" style="position:fixed;background:#fff">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <template is="newsList" data="{{...list0}}"></template>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <template is="newsList" data="{{...list1}}"></template>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <template is="newsList" data="{{...list2}}"></template>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <template is="newsList" data="{{...list3}}"></template>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

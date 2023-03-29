@@ -1,0 +1,17 @@
+/* pages/newsdetail/newsdetail.wxss */
+@import "/wxParse/wxParse.wxss";
+
+.articletitle{
+width:750rpx;
+text-align:center;
+margin-top:20rpx; 
+}
+.articlesecond{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width:750rpx;
+text-align:center;
+padding: 20rpx
+}

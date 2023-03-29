@@ -1,0 +1,134 @@
+.aidwhole {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 100%;
+  width: 750rpx;
+  background: #fff;
+  flex-direction: column;
+}
+
+.aidscence {
+  display: flex;
+  flex-direction: column;
+  width: 640rpx;
+}
+.aidsteps{
+    border: 2rpx solid #999999;
+    border-radius:20rpx 
+}
+.aidstep {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top:20rpx; 
+  padding-bottom:20rpx; 
+}
+.aidstepimg{
+  display: flex;
+  background: #f96060;
+  width: 40rpx;
+  color: #fff;
+  margin-top:3rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:30rpx; 
+  height:40rpx;
+  padding: 5rpx;
+  border-radius: 50%;
+}
+.aidsqaimg{
+  display: flex;
+  background: #f96060;
+  width: 40rpx;
+  height:40rpx;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:30rpx; 
+  padding: 5rpx;
+  border-radius: 50%;
+}
+.aidsteptext{
+  display: flex;
+  width: 540rpx; 
+  flex-direction: column;
+  align-items: flex-start;
+}
+.aidqasmall{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.aidqatext{
+    display: flex;
+    margin-left:20rpx;
+    width: 570rpx
+}
+.aidqa{
+  display: flex;
+  flex-direction: column;
+  width: 640rpx
+}
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.weui-cells:before,
+.weui-cells:after {
+  display: none;
+}
+.weui-cells_show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.weui-cell:before {
+  right: 15px;
+}
+.kind-list__item {
+  margin: 10px 0;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.kind-list__item:first-child {
+  margin-top: 0;
+}
+.kind-list__img {
+  width: 30px;
+  height: 30px;
+}
+.kind-list__item-hd {
+  padding: 20px;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+.kind-list__item-hd_show {
+  opacity: .4;
+}
+.kind-list__item-bd {
+  height: 0;
+  overflow: hidden;
+}
+.kind-list__item-bd_show {
+  height: auto;
+}
+.buttonstyle{
+  margin-top:10rpx;
+}
+
+

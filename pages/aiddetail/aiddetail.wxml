@@ -1,0 +1,30 @@
+<import src="aidtemplate.wxml" />
+<view class="aidwhole">
+  <view wx:if="{{video!=''}}" style="margin-top:30rpx">
+    <video src="{{video}}" duration="{{duration}}" autoplay="true"></video>
+  </view>
+  <view wx:elif="{{video==''&&img!=''}}" style="margin-top:30rpx">
+    <image src="{{img}}" mode="aspectFill" style="width:640rpx"></image>
+  </view>
+  <view wx:if="{{scenes.length!=0}}">
+    <block wx:for="{{scenes}}" wx:for-item="scenceitem" wx:key="*this">
+      <template is="aidTemplate" data="{{...scenceitem}}"></template>
+    </block>
+  </view>
+  <view wx:if="{{subfolders.length!=0}}" style="margin-top:20rpx">
+    <text>常见问题:</text>
+    <block wx:for="{{subfolders[0].data}}" wx:for-item="qaitem" wx:key="*this">
+      <view class="aidqa">
+        <view id="{{qaitem.id}}" class="weui-flex__item" bindtap="toggle" style="margin-top:15rpx;">
+          <view class="aidqasmall">
+            <text class="aidstepimg" style="padding:3rpx;margin-top:0rpx">{{switchs[qaitem.id-1] ? '-':'+'}}</text>
+            <view class="aidqatext">
+                <text style="font-size:30rpx;margin-top:2rpx;flex-wrap:wrap">{{qaitem.question}}</text>
+            </view>
+          </view>
+          <view class="kind-list__item-bd {{switchs[qaitem.id-1] ? 'kind-list__item-bd_show' : ''}}" style="font-size:28rpx;color:#999;margin-left:60rpx;width:540rpx">{{qaitem.answer}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+.aidwhole{
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 750rpx;
+  background: #ffffff;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 3rpx;
+}
+.aidtype{
+  margin-top: 20rpx;
+  display: flex;
+  width: 186rpx;
+  height: 186rpx;
+  background: #ffffff;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.aidtypetext{
+ color: #000000;
+ height: 50rpx;
+ text-align: center;
+ margin-top: 15rpx;
+ font-size: 24rpx
+}
+.aidtypeimg{
+  display: flex;
+  width: 187rpx;
+  height: 187rpx;
+  background: #0000ff;
+  flex-direction:column;
+}
+
